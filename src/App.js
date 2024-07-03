@@ -11,9 +11,9 @@ function App() {
     setPosts(savedPosts);
   }, []);
 
-  // useEffect(() => {
-  //   localStorage.setItem('posts', JSON.stringify(posts));
-  // }, [posts]);
+  useEffect(() => {
+  localStorage.setItem('posts', JSON.stringify(posts));
+  }, [posts]);
 
   const handlePost = () => {
     if (newPost.trim()) {
